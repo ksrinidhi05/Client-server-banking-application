@@ -65,36 +65,59 @@ This project provides a simple yet effective demonstration of client-server comm
 ### Project Requirements:
 
 _Operating System:_ Ubuntu (for both server and client virtual machines).
+
 _Networking Protocols:_ TCP for secure, reliable communication; UDP for faster, non-critical messaging.
+
 _Programming Language:_ Python for socket programming.
+
 _Environment: _VirtualBox to simulate two machines (one client, one server).
+
 _Security: _Basic encryption for secure transactions.
 
 ### Project Modules:
 
 **Client Module (Bank User Interface):**
+
 _Functionality: _Allows users to log in, view account details, and perform transactions.
+
 _Network Type:_ TCP connection for reliable, secure communication.
+
 _Connections: _1 TCP connection per session for secure data transfer.
 
+
 **Server Module (Bank Central System):**
+
 _Functionality: _Handles client requests ,and stores account details.
+
 _Network Type:_ TCP for client requests, UDP for notifications.
+
 _Connections: _Multiple TCP connections to handle concurrent clients; 1 UDP connection for real-time notifications.
 
+
 **Transaction Processing Module:**
+
 _Functionality:_ Processes various client transactions such as balance checks and fund transfers.
+
 _Network Type: _TCP to ensure transactional data integrity.
+
 _Connections:_ Shared TCP connection with client-server communication.
 
+
 **Security Module:**
+
 _Functionality:_ Ensures secure communication by validating client credentials before processing requests.
+
 _Network Type:_ TCP to maintain a secure channel.
+
 _Connections:_ 1 secure TCP connection per client login session.
 
+
 **Notification/Alert Module:**
+
 _Functionality: _Sends real-time alerts (e.g., transaction confirmations, suspicious activity) to clients.
+
 _Network Type: _UDP for faster, less reliable delivery.
+
 _Connections:_ 1 UDP connection for broadcasting alerts to clients.
 
 
